@@ -25,7 +25,7 @@ Vcs-Browser: https://code.launchpad.net/~ubuntu-server/dpdk/+git/dpdk
 
 Package: dpdk
 Section: admin
-Architecture: amd64 i386
+Architecture: amd64 arm64 i386
 Homepage: http://www.dpdk.org
 Depends: libdpdk-dev (= ${binary:Version}),
          lsb-base (>= 3.2-14),
@@ -40,7 +40,7 @@ Description: Data Plane Development Kit (runtime)
 
 Package: dpdk-dev
 Section: devel
-Architecture: amd64 i386
+Architecture: amd64 arm64 i386
 Homepage: http://www.dpdk.org
 Depends: libdpdk-dev (= ${binary:Version}), ${misc:Depends}
 Description: Data Plane Development Kit (development files)
@@ -61,7 +61,7 @@ Description: Data Plane Development Kit (documentation)
 
 Package: libdpdk-dev
 Section: libdevel
-Architecture: amd64 i386
+Architecture: amd64 arm64 i386
 Multi-Arch: same
 Homepage: http://www.dpdk.org
 Pre-Depends: ${misc:Pre-Depends}
@@ -129,7 +129,7 @@ Description: Data Plane Development Kit (libethdev runtime library)
  This package contains the runtime libraries for libethdev
 
 Package: libdpdk-librte-acl2
-Architecture: amd64 i386
+Architecture: amd64 arm64 i386
 Section: libs
 Multi-Arch: same
 Homepage: http://dpdk.org/doc/api/rte__ethdev_8h.html

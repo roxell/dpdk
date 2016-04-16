@@ -1,3 +1,13 @@
+dpdk (16.04-0ubuntu2~dev1) UNRELEASED; urgency=medium
+
+  * Adding support for ARM64:
+    - debian/control: adding arm64 to the supported architecture list
+    - debian/rules: supporting dpdk config and machine for arm64
+    - d/p/ubuntu-fix-xenvirt-support-dynamic-page-size.patch: fix build
+      failure on arm64
+
+ -- Ricardo Salveti de Araujo <ricardo.salveti@linaro.org>  Mon, 18 Apr 2016 00:09:22 -0300
+
 dpdk (16.04-0ubuntu1~dev1) UNRELEASED; urgency=medium
 
   * Merge with upstream DPDK 16.04 release
