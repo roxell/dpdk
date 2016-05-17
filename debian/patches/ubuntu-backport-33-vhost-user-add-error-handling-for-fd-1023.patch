@@ -111,15 +111,15 @@ Index: dpdk/lib/librte_vhost/vhost_user/vhost-net-user.c
  }
  
  /* callback when there is message on the connfd */
-@@ -447,6 +455,7 @@ int
+@@ -453,6 +461,7 @@ int
  rte_vhost_driver_register(const char *path)
  {
  	struct vhost_server *vserver;
 +	int ret;
  
  	pthread_mutex_lock(&g_vhost_server.server_mutex);
- 	if (ops == NULL)
-@@ -474,8 +483,18 @@ rte_vhost_driver_register(const char *pa
+ 
+@@ -478,8 +487,18 @@ rte_vhost_driver_register(const char *pa
  
  	vserver->path = strdup(path);
  

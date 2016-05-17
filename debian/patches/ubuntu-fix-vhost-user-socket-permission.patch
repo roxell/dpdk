@@ -82,7 +82,7 @@ Index: dpdk/lib/librte_vhost/vhost_user/vhost-net-user.c
  #define MAX_VIRTIO_BACKLOG 128
  
  static void vserver_new_vq_conn(int fd, void *data, int *remove);
-@@ -482,6 +484,8 @@ rte_vhost_driver_register(const char *pa
+@@ -486,6 +488,8 @@ rte_vhost_driver_register(const char *pa
  		return -1;
  	}
  
@@ -96,7 +96,7 @@ Index: dpdk/lib/librte_eal/linuxapp/eal/eal.c
 --- dpdk.orig/lib/librte_eal/linuxapp/eal/eal.c
 +++ dpdk/lib/librte_eal/linuxapp/eal/eal.c
 @@ -53,6 +53,9 @@
- #if defined(RTE_ARCH_X86_64) || defined(RTE_ARCH_I686)
+ #if defined(RTE_ARCH_X86)
  #include <sys/io.h>
  #endif
 +#include <sys/types.h>
@@ -129,7 +129,7 @@ Index: dpdk/lib/librte_eal/linuxapp/eal/eal.c
  		default:
  			if (opt < OPT_LONG_MIN_NUM && isprint(opt)) {
  				RTE_LOG(ERR, EAL, "Option %c is not supported "
-@@ -932,3 +945,172 @@ rte_eal_check_module(const char *module_
+@@ -934,3 +947,172 @@ rte_eal_check_module(const char *module_
  	/* Module has been found */
  	return 1;
  }
@@ -306,7 +306,7 @@ Index: dpdk/lib/librte_eal/common/include/rte_eal.h
 ===================================================================
 --- dpdk.orig/lib/librte_eal/common/include/rte_eal.h
 +++ dpdk/lib/librte_eal/common/include/rte_eal.h
-@@ -234,6 +234,11 @@ static inline int rte_gettid(void)
+@@ -252,6 +252,11 @@ static inline int rte_gettid(void)
  	return RTE_PER_LCORE(_thread_id);
  }
  

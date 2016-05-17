@@ -41,9 +41,9 @@ Index: dpdk/lib/librte_vhost/vhost_user/vhost-net-user.c
  	vdev_ctx.fh = fh;
 +	vserver->fh = fh;
  	size = strnlen(vserver->path, PATH_MAX);
- 	ops->set_ifname(vdev_ctx, vserver->path,
+ 	vhost_set_ifname(vdev_ctx, vserver->path,
  		size);
-@@ -482,6 +483,7 @@ rte_vhost_driver_register(const char *pa
+@@ -486,6 +487,7 @@ rte_vhost_driver_register(const char *pa
  	}
  
  	vserver->path = strdup(path);
@@ -51,7 +51,7 @@ Index: dpdk/lib/librte_vhost/vhost_user/vhost-net-user.c
  
  	ret = fdset_add(&g_vhost_server.fdset, vserver->listenfd,
  		vserver_new_vq_conn, NULL, vserver);
-@@ -516,6 +518,11 @@ rte_vhost_driver_unregister(const char *
+@@ -520,6 +522,11 @@ rte_vhost_driver_unregister(const char *
  
  	for (i = 0; i < g_vhost_server.vserver_cnt; i++) {
  		if (!strcmp(g_vhost_server.server[i]->path, path)) {
