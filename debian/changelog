@@ -20,6 +20,9 @@ dpdk (16.04-0ubuntu1~dev1) UNRELEASED; urgency=medium
       This was formerly part of a patch we dropped becuase the majority is
       upstream now (d/p/ubuntu-fix-lpm-use-after-free-and-leak.patch).
       This change is in DPDK 16.07 and can be dropped on the next merge.
+  * adapt to new build system
+    - drop enabling the following build config symbols as they no more exist
+        CONFIG_RTE_BUILD_COMBINE_LIBS
 
  -- Christian Ehrhardt <christian.ehrhardt@canonical.com>  Tue, 17 May 2016 14:23:21 +0200
 
