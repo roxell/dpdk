@@ -1,3 +1,11 @@
+dpdk (16.04-0ubuntu1~dev1) UNRELEASED; urgency=medium
+
+  * Merge DPDK 16.04
+    - drop patches that are already upstream in DPDK 16.04
+      TODO-List
+
+ -- Christian Ehrhardt <christian.ehrhardt@canonical.com>  Tue, 17 May 2016 14:23:21 +0200
+
 dpdk (2.2.0-0ubuntu9) yakkety; urgency=medium
 
   * d/p/ubuntu-backport-[36-37] fix virtio issues (LP: #1570195):
