@@ -35,6 +35,8 @@ build-config:
 	$(MAKE) O=$(DPDK_STATIC_DIR) T=$(DPDK_CONFIG) config
 	sed -ri -e 's,(RTE_MACHINE=).*,\1"default",' \
 	        -e 's,(RTE_NEXT_ABI=).*,\1n,' \
+                -e 's,(CONFIG_RTE_EAL_IGB_UIO=).*,\1n,' \
+                -e 's,(CONFIG_RTE_KNI_KMOD=).*,\1n,' \
 	        -e 's,(LIBRTE_PMD_PCAP=).*,\1y,' \
 	        -e 's,(LIBRTE_PMD_XENVIRT=).*,\1y,' \
 	        $(DPDK_STATIC_DIR)/.config
