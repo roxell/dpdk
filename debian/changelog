@@ -4,21 +4,22 @@ dpdk (16.04-0ubuntu1~dev1) UNRELEASED; urgency=medium
   * droping patches/backports that are already upstream in DPDK 16.04
     - d/p/ubuntu-fix-doc-installpath.patch
     - d/p/ubuntu-fix-testpmd-without-xen.patch
-    - d/p/ubuntu-backport-[28-32,34-35]
     - d/p/ubuntu-fix-lpm-use-after-free-and-leak.patch
-    - drop d/p/ubuntu-backport-[36-37] but keep doc and example changes in d/*
-
+    - d/p/ubuntu-backport-[01-32,34-35] backports for stability
+    - d/p/ubuntu-backport-[36-37] but keep doc and example changes in d/*
   * droping patches for soname / linking fixups. Upstream now goes with proper
     soname/abi/api handling per sublib plus a linker script.
     - d/p/ubuntu-combined-shared-lib-abiversion.patch
     - d/p/ubuntu-fix-library-linkage.patch
-
   * keeping patches:
     - d/p/ubuntu-backport-38... fix for memory leak
     - d/p/ubuntu-backport-33-vhost-user-add-error-handling-for-fd-1023.patch
-TODO
-    - doc and example changes of d/p/ubuntu-backport-[36-37]
-TODO
+    - doc and example changes that were related to d/p/ubuntu-backport-[36-37]
+  * adding patches
+    - d/p/ubuntu-backport-39-lpm-fix-freeing-in-compatibility-mode.patch
+      This was formerly part of a patch we dropped becuase the majority is
+      upstream now (d/p/ubuntu-fix-lpm-use-after-free-and-leak.patch).
+      This change is in DPDK 16.07 and can be dropped on the next merge.
 
  -- Christian Ehrhardt <christian.ehrhardt@canonical.com>  Tue, 17 May 2016 14:23:21 +0200
 
