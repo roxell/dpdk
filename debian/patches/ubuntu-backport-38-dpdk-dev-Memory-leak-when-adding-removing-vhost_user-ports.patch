@@ -5,23 +5,9 @@ http://dpdk.org/dev/patchwork/patch/12103/
 Not accepted yet, but likely to be accepted in some form once tested and
 confirmed.
 
-new fix also relies on a lot of new code, vhost_destroy_device looks totally
-different from the former destroy_device.
-History on todays function content:
-  4796ad63 - original code moved from examples to lib
-  a90ca1a1 - this replaces ops->destroy_device with vhost_destroy_device
-  71dc571e - simple check against null pointers
-  45ca9c6f - this changed the code from linked list to arrays
-    New code cleans with:
-      notify_ops->destroy_device (callback into the parent)
-      cleanup_device was existing before even in 2.2 code
-      free_device as well existing before even in 2.2 code
-    Old code cleans with:
-      notify_ops->destroy_device - still there
-      rm_config_ll_entry -> eventually calls cleanup_device and free_device
-        (just in the more complex linked list way)
-So the only adaption for backporting needed is to replace vhost_destroy_device
-with ops->destroy_device(ctx)
+Update 2016-05-17:
+Moving to 16.04 this now applies as-is without modifications, dropping the
+former backport changes.
 
 Also along the discussion vserver-fh is now initialized with -1 to avoid
 accidentially deleting the first connected port if we delete another not yet
@@ -29,7 +15,7 @@ connected port.
 
 Forwarded: yes (based on an upstream discussion)
 Author: Christian Ehrhardt <christian.ehrhardt@canonical.com>
-Last-Update: 2016-04-19
+Last-Update: 2016-05-17
 
 Index: dpdk/lib/librte_vhost/vhost_user/vhost-net-user.c
 ===================================================================
@@ -58,7 +44,7 @@ Index: dpdk/lib/librte_vhost/vhost_user/vhost-net-user.c
 +			struct vhost_device_ctx ctx;
 +
 +			ctx.fh = g_vhost_server.server[i]->fh;
-+			ops->destroy_device(ctx);
++			vhost_destroy_device(ctx);
 +
  			fdset_del(&g_vhost_server.fdset,
  				g_vhost_server.server[i]->listenfd);
