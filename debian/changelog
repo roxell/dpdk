@@ -17,6 +17,9 @@ dpdk (16.04-0ubuntu1~dev1) UNRELEASED; urgency=medium
       upstream commit now.
     - d/p/ubuntu-backport-33-vhost-user-add-error-handling-for-fd-1023.patch
     - doc and example changes that were related to d/p/ubuntu-backport-[36-37]
+    - d/p/ubuntu-fix-vhost-user-socket-permission.patch adapt for 16.04:
+      In the new build system with sublibs the added function needs to be
+      listed in lib/librte_eal/linuxapp/eal/rte_eal_version.map
   * adding patches
     - d/p/ubuntu-backport-39-lpm-fix-freeing-in-compatibility-mode.patch
       This was formerly part of a patch we dropped becuase the majority is
