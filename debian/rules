@@ -111,6 +111,10 @@ binary-arch:
 	rm debian/dpdk/usr/sbin/dpdk_nic_bind
 	ln -s /usr/share/dpdk/tools/dpdk_nic_bind.py \
 		debian/dpdk/sbin/dpdk_nic_bind
+	# "test" isn't a binary we want to put in the search path
+	# provide it as extra in /usr/share/dpdk/apps
+	mkdir -p debian/dpdk/usr/share/dpdk/apps
+	mv debian/dpdk/usr/bin/test debian/dpdk/usr/share/dpdk/apps/
 	# Package: dpdk-dev (build environment)
 	$(MAKE) O=$(DPDK_SHARED_DIR) prefix=/usr \
 		DESTDIR=debian/dpdk-dev install-sdk
