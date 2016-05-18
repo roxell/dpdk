@@ -26,7 +26,7 @@ Vcs-Browser: https://code.launchpad.net/~ubuntu-server/dpdk/+git/dpdk
 Package: dpdk
 Section: devel
 Architecture: amd64 i386
-Depends: libdpdk0 (= ${binary:Version}),
+Depends: libdpdk-dev (= ${binary:Version}),
          lsb-base (>= 3.2-14),
          ${misc:Depends},
          ${python:Depends},
@@ -40,7 +40,7 @@ Description: Data Plane Development Kit (runtime)
 Package: dpdk-dev
 Section: devel
 Architecture: amd64 i386
-Depends: libdpdk0 (= ${binary:Version}), ${misc:Depends}
+Depends: libdpdk-dev (= ${binary:Version}), ${misc:Depends}
 Description: Data Plane Development Kit (development files)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
@@ -56,26 +56,519 @@ Description: Data Plane Development Kit (documentation)
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the complete set of documentation and guides.
 
-Package: libdpdk0
-Architecture: amd64 i386
-Multi-Arch: same
-Pre-Depends: ${misc:Pre-Depends}
-Depends: ${misc:Depends}, ${shlibs:Depends}
-Description: Data Plane Development Kit (runtime libraries)
- DPDK is a set of libraries for fast packet processing. Applications run
- in user-space and communicate directly with dedicated network interfaces.
- This package contains the runtime libraries which require at least SSE3
- support in the CPU.
-
 Package: libdpdk-dev
 Section: libdevel
 Architecture: amd64 i386
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
-Depends: libdpdk0 (= ${binary:Version}), ${misc:Depends}
+Depends: ${misc:Depends}
 Description: Data Plane Development Kit (basic development files)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the basic headers and library files required to
  build external applications which will also require at least SSE3 support
  when running.
+
+Package: libdpdk-libethdev3
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for libethdev3
+
+Package: libdpdk-librte_acl2
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_acl2
+
+Package: libdpdk-librte_cfgfile2
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_cfgfile2
+
+Package: libdpdk-librte_cmdline2
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_cmdline2
+
+Package: libdpdk-librte_cryptodev1
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_cryptodev1
+
+Package: libdpdk-librte_distributor1
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_distributor1
+
+Package: libdpdk-librte_eal2
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_eal2
+
+Package: libdpdk-librte_hash2
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_hash2
+
+Package: libdpdk-librte_ip_frag1
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_ip_frag1
+
+Package: libdpdk-librte_jobstats1
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_jobstats1
+
+Package: libdpdk-librte_kni2
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_kni2
+
+Package: libdpdk-librte_kvargs1
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_kvargs1
+
+Package: libdpdk-librte_lpm2
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_lpm2
+
+Package: libdpdk-librte_mbuf2
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_mbuf2
+
+Package: libdpdk-librte_mempool1
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_mempool1
+
+Package: libdpdk-librte_meter1
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_meter1
+
+Package: libdpdk-librte_pipeline3
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_pipeline3
+
+Package: libdpdk-librte_pmd_af_packet1
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_pmd_af_packet1
+
+Package: libdpdk-librte_pmd_bond1
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_pmd_bond1
+
+Package: libdpdk-librte_pmd_cxgbe1
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_pmd_cxgbe1
+
+Package: libdpdk-librte_pmd_e10001
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_pmd_e10001
+
+Package: libdpdk-librte_pmd_ena1
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_pmd_ena1
+
+Package: libdpdk-librte_pmd_enic1
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_pmd_enic1
+
+Package: libdpdk-librte_pmd_fm10k1
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_pmd_fm10k1
+
+Package: libdpdk-librte_pmd_i40e1
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_pmd_i40e1
+
+Package: libdpdk-librte_pmd_ixgbe1
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_pmd_ixgbe1
+
+Package: libdpdk-librte_pmd_null_crypto1
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_pmd_null_crypto1
+
+Package: libdpdk-librte_pmd_null1
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_pmd_null1
+
+Package: libdpdk-librte_pmd_pcap1
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_pmd_pcap1
+
+Package: libdpdk-librte_pmd_ring2
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_pmd_ring2
+
+Package: libdpdk-librte_pmd_vhost1
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_pmd_vhost1
+
+Package: libdpdk-librte_pmd_virtio1
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_pmd_virtio1
+
+Package: libdpdk-librte_pmd_vmxnet3_uio1
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_pmd_vmxnet3_uio1
+
+Package: libdpdk-librte_pmd_xenvirt1
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_pmd_xenvirt1
+
+Package: libdpdk-librte_port2
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_port2
+
+Package: libdpdk-librte_power1
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_power1
+
+Package: libdpdk-librte_reorder1
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_reorder1
+
+Package: libdpdk-librte_ring1
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_ring1
+
+Package: libdpdk-librte_sched1
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_sched1
+
+Package: libdpdk-librte_table2
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_table2
+
+Package: libdpdk-librte_timer1
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_timer1
+
+Package: libdpdk-librte_vhost2
+Architecture: amd64 i386
+Section: libs
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libdpdk0
+Description: Data Plane Development Kit (runtime libraries)
+ DPDK is a set of libraries for fast packet processing. Applications run
+ in user-space and communicate directly with dedicated network interfaces.
+ This package contains the runtime libraries for librte_vhost2
