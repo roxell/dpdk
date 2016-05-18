@@ -15,9 +15,19 @@ in the former patches.
 
 Fixes LP: #1546565
 
+*Update*
+ - with the split libs it now nees to be listed in
+   lib/librte_eal/linuxapp/eal/rte_eal_version.map to work on link steps
+ - please note that upstream gravitates towards not extending but creating a
+   new the API in DPDK as long term solution (will take a while)
+ - also as listed before most affected projects seem to create their own
+   workaround.
+ So over time we have to check when we can drop it at the price of a config
+ transition - likely OVS 2.6 won't need it anymore.
+
 Forwarded: yes
 Author: Christian Ehrhardt <christian.ehrhardt@canonical.com>
-Last-Update: 2016-04-24
+Last-Update: 2016-05-18
 
 Index: dpdk/lib/librte_eal/common/eal_common_options.c
 ===================================================================
@@ -348,3 +358,15 @@ Index: dpdk/doc/guides/testpmd_app_ug/run_app.rst
  
  Testpmd Command-line Options
  ----------------------------
+Index: dpdk/lib/librte_eal/linuxapp/eal/rte_eal_version.map
+===================================================================
+--- dpdk.orig/lib/librte_eal/linuxapp/eal/rte_eal_version.map
++++ dpdk/lib/librte_eal/linuxapp/eal/rte_eal_version.map
+@@ -138,6 +138,7 @@ DPDK_2.2 {
+ 	rte_keepalive_mark_alive;
+ 	rte_keepalive_register_core;
+ 	rte_xen_dom0_supported;
++	rte_eal_set_socket_permissions;
+ 
+ } DPDK_2.1;
+ 
