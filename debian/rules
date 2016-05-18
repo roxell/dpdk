@@ -133,11 +133,12 @@ binary-arch:
 	# Package(s): libdpdk-<NAME><VER> (bare runtime libs)
 	for lib in $$(ls -1 debian/dpdk/$(LIBDIR)/*.so.*); do
 	  BN=$$(basename $$lib);
+	  BNF=$$(basename $$lib | tr '_' '-');
 	  LN=$$(echo $$BN | sed -e 's/\.so\.[0-9]*$$//');
 	  VER=$$(echo $$BN | sed -e 's/^.*\.so\.//');
-	  mkdir -p debian/libdpdk-$(BN)$(VER)/$(LIBDIR)
+	  mkdir -p debian/libdpdk-$(BNF)$(VER)/$(LIBDIR)
 	  # real binary .so.X file
-	  mv debian/dpdk/$(LIBDIR)/$(lib) debian/libdpdk-$(BN)$(VER)/$(LIBDIR)
+	  mv debian/dpdk/$(LIBDIR)/$(lib) debian/libdpdk-$(BNF)$(VER)/$(LIBDIR)
 	done
 	# NOTE: linker script - we also will need multiple symbol files then
 	dh_python2
