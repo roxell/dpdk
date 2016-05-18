@@ -12,7 +12,9 @@ dpdk (16.04-0ubuntu1~dev1) UNRELEASED; urgency=medium
     - d/p/ubuntu-combined-shared-lib-abiversion.patch
     - d/p/ubuntu-fix-library-linkage.patch
   * keeping patches:
-    - d/p/ubuntu-backport-38... fix for memory leak
+    - d/p/ubuntu-backport-38-* fix for memory leak
+      this now applies as is, so changed from a modified backport to match the
+      upstream commit now.
     - d/p/ubuntu-backport-33-vhost-user-add-error-handling-for-fd-1023.patch
     - doc and example changes that were related to d/p/ubuntu-backport-[36-37]
   * adding patches
