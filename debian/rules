@@ -131,7 +131,7 @@ binary-arch:
 	# symlinks to last .so's are in the non versioned libdpdk-dev as well
 	# this allows multiple libdpdk-<NAME><VER> at different VER concurrently
 	# libdpdk-dev depends on all sublibs so symlinks are never broken
-	mv debian/dpdk/$(LIBDIR)/*.so debian/libdpdk-dev/$(LIBDIR)/
+	mv debian/dpdk/usr/lib/*.so debian/libdpdk-dev/$(LIBDIR)/
 	# Package(s): libdpdk-<NAME><VER> (bare runtime libs)
 	for lib in $$(ls -1 debian/dpdk/$(LIBDIR)/*.so.*); do
 	  BN=$$(basename $$lib);
@@ -140,7 +140,7 @@ binary-arch:
 	  VER=$$(echo $$BN | sed -e 's/^.*\.so\.//');
 	  mkdir -p debian/libdpdk-$(BNF)$(VER)/$(LIBDIR)
 	  # real binary .so.X file
-	  mv debian/dpdk/$(LIBDIR)/$(lib) debian/libdpdk-$(BNF)$(VER)/$(LIBDIR)
+	  mv debian/dpdk/usr/lib/$(lib) debian/libdpdk-$(BNF)$(VER)/$(LIBDIR)
 	done
 	# NOTE: linker script - we also will need multiple symbol files then
 	dh_python2
