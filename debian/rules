@@ -111,36 +111,35 @@ binary-arch:
 	rm debian/dpdk/usr/sbin/dpdk_nic_bind
 	ln -s /usr/share/dpdk/tools/dpdk_nic_bind.py \
 		debian/dpdk/sbin/dpdk_nic_bind
-	# Package: libdpdk0 (bare runtime libs)
-	mkdir -p debian/libdpdk0/$(LIBDIR)
-	# NOTE so far upstream dpdk has not settled on really versioning the
-	# combined lib. There are discussions ongoing and various alternative
-	# approaches.
-	# We have to wait until that is clarified upstream (in a follow on dpdk
-	# version).
-	# One likely solution will make us ship the non combined .so and a
-	# linker script which replaces the combined lib.
-	# To easen package management a few notes how this will change if that
-	# happens:
-	# NOTE: linker script - this becomes a nop (linker skript has no sover
-	# on its own)
-	rm debian/dpdk/usr/lib/libdpdk.so
-	cp $(DPDK_SHARED_DIR)/lib/libdpdk.so.0 debian/libdpdk0/$(LIBDIR)/
-	# NOTE: linker script - insert basenames loop for all .so's
-	# NOTE: linker script - we also will need multiple symbol files then
 	# Package: dpdk-dev (build environment)
 	$(MAKE) O=$(DPDK_SHARED_DIR) prefix=/usr \
 		DESTDIR=debian/dpdk-dev install-sdk
 	cp $(DPDK_SHARED_DIR)/.config debian/dpdk-dev/usr/share/dpdk/config
-	# Package: libdpdk-dev (bare headers and static devel libs)
+	# Package: libdpdk-dev (bare headers, static devel libs and linker
+	# script)
 	mkdir -p debian/libdpdk-dev/$(LIBDIR)
-	# NOTE: linker script - insert basenames loop for all .a's
-	ln -s /$(LIBDIR)/libdpdk.so.0 \
-		debian/libdpdk-dev/$(LIBDIR)/libdpdk.so
-	mv debian/dpdk/usr/lib/libdpdk.a debian/libdpdk-dev/$(LIBDIR)/
+	# linker script
+	mv debian/dpdk/usr/lib/libdpdk.so debian/libdpdk-dev/$(LIBDIR)/
+	# includes
 	mv debian/dpdk-dev/usr/include/dpdk debian/libdpdk-dev/usr/include/
-	# NOTE: linker script - package instead of removing all sublibs
-	rm -rf debian/dpdk/usr/lib*
+	# all version less names links to static libs
+	mv debian/dpdk/usr/lib/lib*.a debian/libdpdk-dev/$(LIBDIR)/
+	# all static libs are in the dev package
+	mv debian/dpdk/usr/lib/lib*.a debian/libdpdk-dev/$(LIBDIR)/
+	# symlinks to last .so's are in the non versioned libdpdk-dev
+	# allows multiple libdpdk-<NAME><VER> at different VER concurrently
+	# libdpdk-dev depends on all sublibs so symlinks are never broken
+	mv debian/dpdk/$(LIBDIR)/*.so debian/libdpdk-dev/$(LIBDIR)/
+	# Package(s): libdpdk-<NAME><VER> (bare runtime libs)
+	for lib in $$(ls -1 debian/dpdk/$(LIBDIR)/*.so.*); do
+	  BN=$$(basename $$lib);
+	  LN=$$(echo $$BN | sed -e 's/\.so\.[0-9]*$$//');
+	  VER=$$(echo $$BN | sed -e 's/^.*\.so\.//');
+	  mkdir -p debian/libdpdk-$(BN)$(VER)/$(LIBDIR)
+	  # real binary .so.X file
+	  mv debian/dpdk/$(LIBDIR)/$(lib) debian/libdpdk-$(BN)$(VER)/$(LIBDIR)
+	done
+	# NOTE: linker script - we also will need multiple symbol files then
 	dh_python2
 	dh_perl
 	dh_link
