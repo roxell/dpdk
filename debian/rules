@@ -122,12 +122,10 @@ binary-arch:
 	mv debian/dpdk/usr/lib/libdpdk.so debian/libdpdk-dev/$(LIBDIR)/
 	# includes
 	mv debian/dpdk-dev/usr/include/dpdk debian/libdpdk-dev/usr/include/
-	# all version less names links to static libs
-	mv debian/dpdk/usr/lib/lib*.a debian/libdpdk-dev/$(LIBDIR)/
 	# all static libs are in the dev package
 	mv debian/dpdk/usr/lib/lib*.a debian/libdpdk-dev/$(LIBDIR)/
-	# symlinks to last .so's are in the non versioned libdpdk-dev
-	# allows multiple libdpdk-<NAME><VER> at different VER concurrently
+	# symlinks to last .so's are in the non versioned libdpdk-dev as well
+	# this allows multiple libdpdk-<NAME><VER> at different VER concurrently
 	# libdpdk-dev depends on all sublibs so symlinks are never broken
 	mv debian/dpdk/$(LIBDIR)/*.so debian/libdpdk-dev/$(LIBDIR)/
 	# Package(s): libdpdk-<NAME><VER> (bare runtime libs)
