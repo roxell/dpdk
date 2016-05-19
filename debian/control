@@ -123,7 +123,7 @@ Homepage: http://dpdk.org/doc/api/rte__ethdev_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (libethdev runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for libethdev3
@@ -136,7 +136,7 @@ Homepage: http://dpdk.org/doc/api/rte__ethdev_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-acl runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_acl2
@@ -149,7 +149,7 @@ Homepage: http://dpdk.org/doc/api/rte__cfgfile_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-cfgfile runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_cfgfile2
@@ -161,7 +161,7 @@ Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-cmdline runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_cmdline2
@@ -174,7 +174,7 @@ Homepage: http://dpdk.org/doc/api/rte__cryptodev_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-cryptodev runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_cryptodev1
@@ -187,7 +187,7 @@ Homepage: http://dpdk.org/doc/api/rte__distributor_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-distributor runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_distributor1
@@ -200,7 +200,7 @@ Homepage: http://dpdk.org/doc/api/rte__eal_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-eal runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_eal2
@@ -213,7 +213,7 @@ Homepage: http://dpdk.org/doc/api/rte__hash_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-hash runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_hash2
@@ -226,7 +226,7 @@ Homepage: http://dpdk.org/doc/api/rte__ip__frag_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-ip-frag runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_ip_frag1
@@ -239,7 +239,7 @@ Homepage: http://dpdk.org/doc/api/rte__jobstats_8h_source.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-jobstats runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_jobstats1
@@ -252,7 +252,7 @@ Homepage: http://dpdk.org/doc/api/rte__kni_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-kni runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_kni2
@@ -265,7 +265,7 @@ Homepage: http://dpdk.org/doc/api/rte__kvargs_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-kvargs runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_kvargs1
@@ -278,7 +278,7 @@ Homepage: http://dpdk.org/doc/api/rte__lpm_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-lpm runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_lpm2
@@ -291,7 +291,7 @@ Homepage: http://dpdk.org/doc/api/rte__mbuf_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-mbuf2 runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_mbuf2
@@ -304,7 +304,7 @@ Homepage: http://dpdk.org/doc/api/rte__mempool_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-mempool runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_mempool1
@@ -317,7 +317,7 @@ Homepage: http://dpdk.org/doc/api/rte__meter_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-meter runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_meter1
@@ -330,7 +330,7 @@ Homepage: http://dpdk.org/doc/api/rte__pipeline_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-pipeline runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_pipeline3
@@ -343,7 +343,7 @@ Homepage: http://dpdk.org/browse/dpdk/tree/drivers/net/af_packet
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-pmd-af-packet runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_pmd_af_packet1
@@ -356,7 +356,7 @@ Homepage: http://dpdk.org/doc/guides/prog_guide/link_bonding_poll_mode_drv_lib.h
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-pmd-bond runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_pmd_bond1
@@ -369,7 +369,7 @@ Homepage: http://dpdk.org/doc/guides/nics/cxgbe.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-pmd-cxgbe runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_pmd_cxgbe1
@@ -382,7 +382,7 @@ Homepage: http://dpdk.org/doc/guides/nics/e1000em.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-pmd-e1000 runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_pmd_e10001
@@ -395,7 +395,7 @@ Homepage: http://dpdk.org/doc/guides/nics/ena.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-pmd-ena runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_pmd_ena1
@@ -408,7 +408,7 @@ Homepage: http://dpdk.org/doc/guides/nics/enic.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-pmd-enic runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_pmd_enic1
@@ -421,7 +421,7 @@ Homepage: http://dpdk.org/doc/guides/nics/fm10k.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-pmd-fm10k runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_pmd_fm10k1
@@ -434,7 +434,7 @@ Homepage: http://dpdk.org/doc/guides/nics/i40e.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-pmd-i40e runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_pmd_i40e1
@@ -447,7 +447,7 @@ Homepage: http://dpdk.org/doc/guides/nics/ixgbe.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-pmd-ixgbe runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_pmd_ixgbe1
@@ -460,7 +460,7 @@ Homepage: http://dpdk.org/doc/guides/cryptodevs/null.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-pmd-null-crypto runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_pmd_null_crypto1
@@ -473,7 +473,7 @@ Homepage: http://dpdk.org/browse/dpdk/tree/drivers/net/null
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-pmd-null runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_pmd_null1
@@ -486,7 +486,7 @@ Homepage: http://dpdk.org/doc/guides/nics/pcap_ring.html#libpcap-based-pmd
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-pmd-pcap runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_pmd_pcap1
@@ -499,7 +499,7 @@ Homepage: http://dpdk.org/doc/guides/nics/pcap_ring.html#rings-based-pmd
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-pmd-ring runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_pmd_ring2
@@ -512,7 +512,7 @@ Homepage: http://dpdk.org/doc/guides/nics/vhost.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-pmd-vhost runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_pmd_vhost1
@@ -525,7 +525,7 @@ Homepage: http://dpdk.org/doc/guides/nics/virtio.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-pmd-virtio runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_pmd_virtio1
@@ -538,7 +538,7 @@ Homepage: http://dpdk.org/doc/guides/nics/vmxnet3.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-pmd-vmxnet3-uio runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_pmd_vmxnet3_uio1
@@ -551,7 +551,7 @@ Homepage: http://dpdk.org/doc/guides/xen/pkt_switch.html#xen-pmd-frontend-prereq
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-pmd-xenvirt runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_pmd_xenvirt1
@@ -564,7 +564,7 @@ Homepage: http://dpdk.org/doc/api/rte__port_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-port runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_port2
@@ -577,7 +577,7 @@ Homepage: http://dpdk.org/doc/api/rte__power_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-power runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_power1
@@ -590,7 +590,7 @@ Homepage: http://dpdk.org/doc/api/rte__reorder_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte-reorder runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_reorder1
@@ -603,7 +603,7 @@ Homepage: http://dpdk.org/doc/api/rte__ring_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte_ring runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_ring1
@@ -616,7 +616,7 @@ Homepage: http://dpdk.org/doc/api/rte__sched_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte_sched runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_sched1
@@ -629,7 +629,7 @@ Homepage: http://dpdk.org/doc/api/rte__table_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte_table runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_table2
@@ -642,7 +642,7 @@ Homepage: http://dpdk.org/doc/api/rte__timer_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte_timer runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_timer1
@@ -655,7 +655,7 @@ Homepage: http://dpdk.org/doc/api/rte__virtio__net_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
-Description: Data Plane Development Kit (runtime libraries)
+Description: Data Plane Development Kit (librte_vhost runtime library)
  DPDK is a set of libraries for fast packet processing. Applications run
  in user-space and communicate directly with dedicated network interfaces.
  This package contains the runtime libraries for librte_vhost2
