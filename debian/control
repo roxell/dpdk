@@ -76,7 +76,7 @@ Depends: ${misc:Depends},
          libdpdk-librte-hash2,
          libdpdk-librte-ip-frag1,
          libdpdk-librte-jobstats1,
-         libdpdk-librte-kni2,
+         libdpdk-librte-kni2 [amd64],
          libdpdk-librte-kvargs1,
          libdpdk-librte-lpm2,
          libdpdk-librte-mbuf2,
@@ -245,7 +245,7 @@ Description: Data Plane Development Kit (runtime libraries)
  This package contains the runtime libraries for librte_jobstats1
 
 Package: libdpdk-librte-kni2
-Architecture: amd64 i386
+Architecture: amd64
 Section: libs
 Multi-Arch: same
 Homepage: http://dpdk.org/doc/api/rte__kni_8h.html
