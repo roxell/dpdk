@@ -1,6 +1,6 @@
 dpdk (16.04-0ubuntu1~dev1) UNRELEASED; urgency=medium
 
-  * Merge DPDK 16.04
+  * Merge with upstream DPDK 16.04 release
   * droping patches/backports that are already upstream in DPDK 16.04
     - d/p/ubuntu-fix-doc-installpath.patch
     - d/p/ubuntu-fix-testpmd-without-xen.patch
@@ -28,6 +28,9 @@ dpdk (16.04-0ubuntu1~dev1) UNRELEASED; urgency=medium
   * adapt to new build system
     - drop enabling the following build config symbols as they no more exist
         CONFIG_RTE_BUILD_COMBINE_LIBS
+    - Sub-Libraries are now packaged in a versioned package per library. That
+      allows consumers of dpdk to just depend on what they need. As well as
+      installation of multiple .so versions concurrently.
 
  -- Christian Ehrhardt <christian.ehrhardt@canonical.com>  Tue, 17 May 2016 14:23:21 +0200
 
