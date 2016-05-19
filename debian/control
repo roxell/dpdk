@@ -24,7 +24,7 @@ Vcs-Git: https://git.launchpad.net/~ubuntu-server/dpdk
 Vcs-Browser: https://code.launchpad.net/~ubuntu-server/dpdk/+git/dpdk
 
 Package: dpdk
-Section: devel
+Section: admin
 Architecture: amd64 i386
 Homepage: http://www.dpdk.org
 Depends: libdpdk-dev (= ${binary:Version}),
