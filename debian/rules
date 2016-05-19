@@ -142,7 +142,6 @@ binary-arch:
 	  mkdir -p debian/$${LNV}/$(LIBDIR); \
 	  mv $${lib} debian/$${LNV}/$(LIBDIR); \
 	done
-	# NOTE: linker script - we also will need multiple symbol files then
 	dh_python2
 	dh_perl
 	dh_link
