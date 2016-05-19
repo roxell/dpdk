@@ -26,6 +26,7 @@ Vcs-Browser: https://code.launchpad.net/~ubuntu-server/dpdk/+git/dpdk
 Package: dpdk
 Section: devel
 Architecture: amd64 i386
+Homepage: http://www.dpdk.org
 Depends: libdpdk-dev (= ${binary:Version}),
          lsb-base (>= 3.2-14),
          ${misc:Depends},
@@ -40,6 +41,7 @@ Description: Data Plane Development Kit (runtime)
 Package: dpdk-dev
 Section: devel
 Architecture: amd64 i386
+Homepage: http://www.dpdk.org
 Depends: libdpdk-dev (= ${binary:Version}), ${misc:Depends}
 Description: Data Plane Development Kit (development files)
  DPDK is a set of libraries for fast packet processing. Applications run
@@ -50,6 +52,7 @@ Description: Data Plane Development Kit (development files)
 Package: dpdk-doc
 Section: doc
 Architecture: all
+Homepage: http://dpdk.org/doc/guides/index.html
 Depends: libjs-jquery, libjs-underscore, ${misc:Depends}
 Description: Data Plane Development Kit (documentation)
  DPDK is a set of libraries for fast packet processing. Applications run
@@ -60,6 +63,7 @@ Package: libdpdk-dev
 Section: libdevel
 Architecture: amd64 i386
 Multi-Arch: same
+Homepage: http://www.dpdk.org
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends},
          libdpdk-libethdev3,
@@ -115,6 +119,7 @@ Package: libdpdk-libethdev3
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/api/rte__ethdev_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -127,6 +132,7 @@ Package: libdpdk-librte-acl2
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/api/rte__ethdev_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -139,6 +145,7 @@ Package: libdpdk-librte-cfgfile2
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/api/rte__cfgfile_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -163,6 +170,7 @@ Package: libdpdk-librte-cryptodev1
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/api/rte__cryptodev_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -175,6 +183,7 @@ Package: libdpdk-librte-distributor1
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/api/rte__distributor_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -187,6 +196,7 @@ Package: libdpdk-librte-eal2
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/api/rte__eal_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -199,6 +209,7 @@ Package: libdpdk-librte-hash2
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/api/rte__hash_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -211,6 +222,7 @@ Package: libdpdk-librte-ip-frag1
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/api/rte__ip__frag_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -223,6 +235,7 @@ Package: libdpdk-librte-jobstats1
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/api/rte__jobstats_8h_source.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -235,6 +248,7 @@ Package: libdpdk-librte-kni2
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/api/rte__kni_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -247,6 +261,7 @@ Package: libdpdk-librte-kvargs1
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/api/rte__kvargs_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -259,6 +274,7 @@ Package: libdpdk-librte-lpm2
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/api/rte__lpm_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -271,6 +287,7 @@ Package: libdpdk-librte-mbuf2
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/api/rte__mbuf_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -283,6 +300,7 @@ Package: libdpdk-librte-mempool1
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/api/rte__mempool_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -295,6 +313,7 @@ Package: libdpdk-librte-meter1
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/api/rte__meter_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -307,6 +326,7 @@ Package: libdpdk-librte-pipeline3
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/api/rte__pipeline_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -319,6 +339,7 @@ Package: libdpdk-librte-pmd-af-packet1
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/browse/dpdk/tree/drivers/net/af_packet
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -331,6 +352,7 @@ Package: libdpdk-librte-pmd-bond1
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/guides/prog_guide/link_bonding_poll_mode_drv_lib.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -343,6 +365,7 @@ Package: libdpdk-librte-pmd-cxgbe1
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/guides/nics/cxgbe.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -355,6 +378,7 @@ Package: libdpdk-librte-pmd-e10001
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/guides/nics/e1000em.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -367,6 +391,7 @@ Package: libdpdk-librte-pmd-ena1
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/guides/nics/ena.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -379,6 +404,7 @@ Package: libdpdk-librte-pmd-enic1
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/guides/nics/enic.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -391,6 +417,7 @@ Package: libdpdk-librte-pmd-fm10k1
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/guides/nics/fm10k.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -403,6 +430,7 @@ Package: libdpdk-librte-pmd-i40e1
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/guides/nics/i40e.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -415,6 +443,7 @@ Package: libdpdk-librte-pmd-ixgbe1
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/guides/nics/ixgbe.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -427,6 +456,7 @@ Package: libdpdk-librte-pmd-null-crypto1
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/guides/cryptodevs/null.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -439,6 +469,7 @@ Package: libdpdk-librte-pmd-null1
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/browse/dpdk/tree/drivers/net/null
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -451,6 +482,7 @@ Package: libdpdk-librte-pmd-pcap1
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/guides/nics/pcap_ring.html#libpcap-based-pmd
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -463,6 +495,7 @@ Package: libdpdk-librte-pmd-ring2
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/guides/nics/pcap_ring.html#rings-based-pmd
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -475,6 +508,7 @@ Package: libdpdk-librte-pmd-vhost1
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/guides/nics/vhost.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -487,6 +521,7 @@ Package: libdpdk-librte-pmd-virtio1
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/guides/nics/virtio.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -499,6 +534,7 @@ Package: libdpdk-librte-pmd-vmxnet3-uio1
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/guides/nics/vmxnet3.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -511,6 +547,7 @@ Package: libdpdk-librte-pmd-xenvirt1
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/guides/xen/pkt_switch.html#xen-pmd-frontend-prerequisites
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -523,6 +560,7 @@ Package: libdpdk-librte-port2
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/api/rte__port_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -535,6 +573,7 @@ Package: libdpdk-librte-power1
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/api/rte__power_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -547,6 +586,7 @@ Package: libdpdk-librte-reorder1
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/api/rte__reorder_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -559,6 +599,7 @@ Package: libdpdk-librte-ring1
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/api/rte__ring_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -571,6 +612,7 @@ Package: libdpdk-librte-sched1
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/api/rte__sched_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -583,6 +625,7 @@ Package: libdpdk-librte-table2
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/api/rte__table_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -595,6 +638,7 @@ Package: libdpdk-librte-timer1
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/api/rte__timer_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
@@ -607,6 +651,7 @@ Package: libdpdk-librte-vhost2
 Architecture: amd64 i386
 Section: libs
 Multi-Arch: same
+Homepage: http://dpdk.org/doc/api/rte__virtio__net_8h.html
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libdpdk0
