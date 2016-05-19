@@ -134,12 +134,13 @@ binary-arch:
 	mv debian/dpdk/usr/lib/*.so debian/libdpdk-dev/$(LIBDIR)/
 	# Package(s): libdpdk-<NAME><VER> (bare runtime libs)
 	for lib in $$(ls -1 debian/dpdk/usr/lib/*.so.*); do \
-	  BN=$$(basename $$lib); \
-	  BNF=$$(basename $$lib | tr '_' '-'); \
-	  LN=$$(echo $$BN | sed -e 's/\.so\.[0-9]*$$//'); \
-	  VER=$$(echo $$BN | sed -e 's/^.*\.so\.//'); \
-	  mkdir -p debian/libdpdk-$(BNF)$(VER)/$(LIBDIR); \
-	  mv debian/dpdk/usr/lib/$(lib) debian/libdpdk-$(BNF)$(VER)/$(LIBDIR); \
+	  BN=$$(basename $${lib}); \
+	  VER=$$(echo $${BN} | sed -e 's/^.*\.so\.//'); \
+	  LN=$$(echo $${BN} | sed -e 's/\.so\.[0-9]*$$//' | tr '_' '-'); \
+	  LNV="libdpdk-$${LN}$${VER}"; \
+	  echo "moving $${lib} for library $${LNV}"; \
+	  mkdir -p debian/$${LNV}/$(LIBDIR); \
+	  mv $${lib} debian/$${LNV}/$(LIBDIR); \
 	done
 	# NOTE: linker script - we also will need multiple symbol files then
 	dh_python2
