@@ -7,24 +7,25 @@ dpdk (16.04-0ubuntu1~dev1) UNRELEASED; urgency=medium
     - d/p/ubuntu-fix-lpm-use-after-free-and-leak.patch
     - d/p/ubuntu-backport-[01-32,34-35] backports for stability
     - d/p/ubuntu-backport-[36-37] but keep doc and example changes in d/*
-  * droping patches for soname / linking fixups. Upstream now goes with proper
-    soname/abi/api handling per sublib plus a linker script.
-    - d/p/ubuntu-combined-shared-lib-abiversion.patch
-    - d/p/ubuntu-fix-library-linkage.patch
+  * droping patches for soname / linking fixups.
+    - Upstream now goes with proper soname/abi/api handling per sublib plus a
+      linker script.
+    - dropped d/p/ubuntu-combined-shared-lib-abiversion.patch
+    - dropped d/p/ubuntu-fix-library-linkage.patch
   * keeping patches:
     - d/p/ubuntu-backport-38-* fix for memory leak
       this now applies as is, so changed from a modified backport to match the
-      upstream commit now.
+      post 16.04 upstream commit now.
     - d/p/ubuntu-backport-33-vhost-user-add-error-handling-for-fd-1023.patch
     - doc and example changes that were related to d/p/ubuntu-backport-[36-37]
-    - d/p/ubuntu-fix-vhost-user-socket-permission.patch adapt for 16.04:
-      In the new build system with sublibs the added function needs to be
+    - d/p/ubuntu-fix-vhost-user-socket-permission.patch adapted for dpdk-16.04:
+      In the new build system with sublibs the exposed function needs to be
       listed in lib/librte_eal/linuxapp/eal/rte_eal_version.map
   * adding patches
     - d/p/ubuntu-backport-39-lpm-fix-freeing-in-compatibility-mode.patch
-      This was formerly part of a patch we dropped becuase the majority is
-      upstream now (d/p/ubuntu-fix-lpm-use-after-free-and-leak.patch).
-      This change is in DPDK 16.07 and can be dropped on the next merge.
+      This was formerly part of a combined patch we dropped becuase the
+      majority is upstream (d/p/ubuntu-fix-lpm-use-after-free-and-leak.patch).
+      This remaining part is in DPDK 16.07 and can be dropped on the next merge.
   * adapt to new build system
     - drop enabling the following build config symbols as they no more exist
         CONFIG_RTE_BUILD_COMBINE_LIBS
