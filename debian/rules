@@ -125,7 +125,6 @@ binary-arch:
 	# "test" isn't a binary we want to put in the search path
 	# provide it as extra in /usr/share/dpdk/apps
 	mkdir -p debian/dpdk/usr/share/dpdk/apps
-	mv debian/dpdk/usr/bin/test debian/dpdk/usr/share/dpdk/apps/
 	# Package: dpdk-dev (build environment)
 	$(MAKE) O=$(DPDK_SHARED_DIR) prefix=/usr \
 		DESTDIR=debian/dpdk-dev install-sdk
