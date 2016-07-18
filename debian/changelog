@@ -35,6 +35,7 @@ dpdk (16.07-rc3-1) UNRELEASED; urgency=medium
   * Droping patches/backports that are already upstream in DPDK 16.07-rc3
     - d/p/ubuntu-fix-bond-symbol-export.patch
     - d/p/ubuntu-backport-33-vhost-user-add-error-handling-for-fd-1023.patch
+  * Update debian/*.symbols to reflect the 16.07-rc3 changes
 
  -- Ricardo Salveti de Araujo <rsalveti@rsalveti.net>  Mon, 18 Jul 2016 15:53:37 -0300
 

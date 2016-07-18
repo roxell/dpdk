@@ -62,7 +62,6 @@ librte_eal.so.2 librte-eal2 #MINVER#
  rte_eal_primary_proc_alive@DPDK_16.04 16.04
  rte_eal_process_type@DPDK_2.0 16.04
  rte_eal_remote_launch@DPDK_2.0 16.04
- rte_eal_set_socket_permissions@DPDK_2.2 16.04
  rte_eal_tailq_lookup@DPDK_2.0 16.04
  rte_eal_tailq_register@DPDK_2.0 16.04
  rte_eal_vdev_init@DPDK_2.0 16.04
@@ -121,6 +120,7 @@ librte_eal.so.2 librte-eal2 #MINVER#
  rte_memzone_walk@DPDK_2.0 16.04
  rte_openlog_stream@DPDK_2.0 16.04
  rte_realloc@DPDK_2.0 16.04
+ rte_rtm_supported@DPDK_16.07 16.07-rc3
  rte_set_application_usage_hook@DPDK_2.0 16.04
  rte_set_log_level@DPDK_2.0 16.04
  rte_set_log_type@DPDK_2.0 16.04
