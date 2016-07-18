@@ -1,4 +1,4 @@
-dpdk (16.07-rc1-1) UNRELEASED; urgency=medium
+dpdk (16.07-rc3-1) UNRELEASED; urgency=medium
 
   [ Christian Ehrhardt ]
   * Merge with upstream DPDK 16.07-rc1 release
@@ -30,7 +30,13 @@ dpdk (16.07-rc1-1) UNRELEASED; urgency=medium
    - fix exported symbols of librte_pmd_bond (sent upstream, can be dropped
      later)
 
- -- Christian Ehrhardt <christian.ehrhardt@canonical.com>  Wed, 06 Jul 2016 09:40:49 +0200
+  [ Ricardo Salveti de Araujo ]
+  * Merge with upstream DPDK 16.07-rc3 release
+  * Droping patches/backports that are already upstream in DPDK 16.07-rc3
+    - d/p/ubuntu-fix-bond-symbol-export.patch
+    - d/p/ubuntu-backport-33-vhost-user-add-error-handling-for-fd-1023.patch
+
+ -- Ricardo Salveti de Araujo <rsalveti@rsalveti.net>  Mon, 18 Jul 2016 15:53:37 -0300
 
 dpdk (16.04-1) UNRELEASED; urgency=medium
 
