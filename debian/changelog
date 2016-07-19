@@ -43,6 +43,7 @@ dpdk (16.07-rc3-1) UNRELEASED; urgency=medium
     package name with soversion (lintian package-name-doesnt-match-sonames)
   * Adding package librte-pmd-bnxt1
   * debian/librte-port3.symbols: removing rte_port_kni_* on i386
+  * debian/librte-eal2.symbols: removing rte_rtm_supported on arm64
 
  -- Ricardo Salveti de Araujo <rsalveti@rsalveti.net>  Mon, 18 Jul 2016 15:53:37 -0300
 
