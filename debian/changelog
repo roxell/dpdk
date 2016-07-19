@@ -42,6 +42,7 @@ dpdk (16.07-rc3-1) UNRELEASED; urgency=medium
   * Renaming package librte-pmd-e10001 to librte-pmd-e1000-1, to avoid mixing
     package name with soversion (lintian package-name-doesnt-match-sonames)
   * Adding package librte-pmd-bnxt1
+  * debian/librte-port3.symbols: removing rte_port_kni_* on i386
 
  -- Ricardo Salveti de Araujo <rsalveti@rsalveti.net>  Mon, 18 Jul 2016 15:53:37 -0300
 
